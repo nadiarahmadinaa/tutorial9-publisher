@@ -8,3 +8,7 @@ Dengan url koneksi ke AMQP yang sama antara publisher dan subscriber, berarti ke
 
 ## Running RabbitMQ as message broker
 ![Running RabbitMQ as message broker](image/running.png)
+
+## Sending and processing event
+![Sending and processing event](image/console.png)
+Gambar ini menunjukkan jalannya kedua program publisher dan subscriber pada console. Disini publisher akan push notification yang akan diterima pada sisi subscriber. Program subscriber aktif untuk listen terus menerus. Sedangkan program publisher hanya aktif ketika ingin mengirim notifikasi. Setiap run terdapat 5 messages yang terkirim ke subscriber dari publisher.
