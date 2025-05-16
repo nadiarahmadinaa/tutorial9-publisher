@@ -12,3 +12,7 @@ Dengan url koneksi ke AMQP yang sama antara publisher dan subscriber, berarti ke
 ## Sending and processing event
 ![Sending and processing event](image/console.png)
 Gambar ini menunjukkan jalannya kedua program publisher dan subscriber pada console. Disini publisher akan push notification yang akan diterima pada sisi subscriber. Program subscriber aktif untuk listen terus menerus. Sedangkan program publisher hanya aktif ketika ingin mengirim notifikasi. Setiap run terdapat 5 messages yang terkirim ke subscriber dari publisher.
+
+## Monitoring chart based on publisher
+![Monitoring chart based on publisher](image/spike.png)
+Ketika sedang menjalankan publisher, akan terdapat 5 pesan yang terkirim. Pesan ini dikirim dalam waktu yang sangat cepat. Sehingga, ketika diakumulasikan, proses yang terjadi pada pertengahan kiriman ini meningkat. Hal ini disebabkan karena perbedaan waktu antar pengiriman yang singkat. Proses tersebut yang menghasilkan spike yang muncul pada dashoard.
