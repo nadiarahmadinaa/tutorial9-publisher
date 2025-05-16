@@ -16,3 +16,7 @@ Gambar ini menunjukkan jalannya kedua program publisher dan subscriber pada cons
 ## Monitoring chart based on publisher
 ![Monitoring chart based on publisher](image/spike.png)
 Ketika sedang menjalankan publisher, akan terdapat 5 pesan yang terkirim. Pesan ini dikirim dalam waktu yang sangat cepat. Sehingga, ketika diakumulasikan, proses yang terjadi pada pertengahan kiriman ini meningkat. Hal ini disebabkan karena perbedaan waktu antar pengiriman yang singkat. Proses tersebut yang menghasilkan spike yang muncul pada dashoard.
+
+## Simulation slow subscriber
+![Simulation slow subscriber](image/slow.png)
+Queue pada screen ini di sekitar 75. Dari kode yang ditambahkan sleep, program menjadi lambat dalam menerima message. Banyaknya message dari sisi publisher dan kelambatan subscriber untuk menerima akan menghasilkan queue pada message broker. Message akan disimpan pada queue sampai bisa di-deliver ke subscriber dengan baik. Khususnya jika kita membuat request banyak dan cepat, queue akan semakin panjang.
